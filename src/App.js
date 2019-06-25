@@ -22,6 +22,14 @@ class App extends Component {
         ok: 0,
         ng: 0,
       },
+      {
+        id: 3,
+        word: 'steeple',
+        definition: '(教会などの)尖塔(せんとう)',
+        example: 'White churches with tall steeples',
+        ok: 0,
+        ng: 0,
+      },
     ],
     cardCount: 0,
     currentView: 'word',
@@ -63,8 +71,10 @@ class App extends Component {
     return (
       <div className="container">
         <p>
+          {cardCount + 1}
+          <span> / </span>
           {vocabularies.length}
-          <span className="pl-2">words</span>
+          <span> words</span>
         </p>
         {vocabularies.map((item, index) => (
           <Card

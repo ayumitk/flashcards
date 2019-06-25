@@ -1,33 +1,44 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Word from './Word';
 
 class Card extends Component {
   switchWord = () => {
-    this.props.onSwitchWord('word');
+    const { onSwitchWord } = this.props;
+    onSwitchWord('word');
   }
 
   switchDefinition = () => {
-    this.props.onSwitchDefinition('definition');
+    const { onSwitchDefinition } = this.props;
+    onSwitchDefinition('definition');
   }
 
   switchExample = () => {
-    this.props.onSwitchExample('example');
+    const { onSwitchExample } = this.props;
+    onSwitchExample('example');
   }
 
   gotIt = (index) => {
-    this.props.onGotIt(index);
+    const { onGotIt } = this.props;
+    onGotIt(index);
   }
 
   studyAgain = (index) => {
-    this.props.onStudyAgain(index);
+    const { onStudyAgain } = this.props;
+    onStudyAgain(index);
   }
 
   render() {
     const {
       vocabulary, cardCount, index, currentView, lastCard,
     } = this.props;
+
+    if (cardCount !== index) {
+      return '';
+    }
+
     return (
-      <div className={`card ${cardCount === index ? 'active' : ''}`}>
+      <div className="card">
         <div className="card-body">
           <Word
             vocabulary={vocabulary}
@@ -43,5 +54,18 @@ class Card extends Component {
     );
   }
 }
+
+Card.propTypes = {
+  onSwitchWord: PropTypes.func.isRequired,
+  onSwitchDefinition: PropTypes.func.isRequired,
+  onSwitchExample: PropTypes.func.isRequired,
+  onGotIt: PropTypes.func.isRequired,
+  onStudyAgain: PropTypes.func.isRequired,
+  vocabulary: PropTypes.object.isRequired,
+  cardCount: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
+  currentView: PropTypes.string.isRequired,
+  lastCard: PropTypes.number.isRequired,
+};
 
 export default Card;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Word extends Component {
   render() {
@@ -13,5 +14,10 @@ class Word extends Component {
     return <p>{vocabulary.word}</p>;
   }
 }
+
+Word.propTypes = {
+  vocabulary: PropTypes.object.isRequired,
+  currentView: PropTypes.string.isRequired,
+};
 
 export default Word;
