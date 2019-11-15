@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
 
@@ -31,13 +31,13 @@ class App extends Component {
 
 
   render() {
-    const {height} = this.state;
+    const { height } = this.state;
 
     return (
       <>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
-          <Container height={height}>
+          <Container height={height} ontouchstart="">
             <BrowserRouter>
               <Switch>
                 <Route exact path="/" component={Home} />

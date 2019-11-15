@@ -5,6 +5,12 @@ import { ChevronLeft } from 'styled-icons/boxicons-regular/ChevronLeft';
 import styled from 'styled-components';
 import Word from './Word';
 
+const Container = styled.div`
+  display: grid;
+  grid-template-rows: 2rem 1fr 4rem;
+  height: 100%;
+`;
+
 const Button = styled.button`
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   opacity: ${props => (props.disabled ? '0.25' : '1')};
@@ -28,12 +34,6 @@ const ButtonGroup = styled.div`
       margin-left: -1px;
     }
   }
-`;
-
-const Container = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 4rem;
-  height: 100%;
 `;
 
 const CardContainer = styled.div`
@@ -102,7 +102,7 @@ class Card extends Component {
 
   render() {
     const {
-      vocabulary, cardCount, index, currentView, lastCard,
+      vocabulary, cardCount, index, currentView, lastCard, allCards,
     } = this.props;
 
     if (cardCount !== index) {
@@ -111,6 +111,12 @@ class Card extends Component {
 
     return (
       <Container>
+        <p style={{ fontSize: '0.812rem', textAlign: 'center', paddingTop: '1rem' }}>
+          {cardCount + 1}
+          <span> / </span>
+          {allCards}
+          <span> words</span>
+        </p>
         <CardContainer>
           <WordContainer>
             <Word
@@ -156,6 +162,7 @@ Card.propTypes = {
   index: PropTypes.number.isRequired,
   currentView: PropTypes.string.isRequired,
   lastCard: PropTypes.number.isRequired,
+  allCards: PropTypes.number.isRequired,
 };
 
 export default Card;

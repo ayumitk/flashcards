@@ -4,11 +4,17 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ArrowRepeat } from 'styled-icons/typicons/ArrowRepeat';
+import { ChevronLeft } from 'styled-icons/boxicons-regular/ChevronLeft';
 import data from '../data.json';
 import Card from './Card';
 
+const Title = styled.h1`
+  text-align:center;
+`;
+
 const Main = styled.main`
   grid-row: 2;
+  /* height:100%; */
 `;
 
 class Deck extends Component {
@@ -20,12 +26,13 @@ class Deck extends Component {
   }
 
   componentDidMount() {
-    const { deckId } = this.props.match.params;
-    const deck = data.find(v => v.deckId === parseInt(deckId, 10));
+    // const { deckId } = this.props.match.params;
+    const { match: { params } } = this.props;
+    const deck = data.find(v => v.deckId === parseInt(params.deckId, 10));
 
     this.setState({
       vocabularies: deck.vocabularies,
-      title: deck.deckTitle,
+      title: deck.title,
     });
   }
 
@@ -85,21 +92,17 @@ class Deck extends Component {
       vocabularies, cardCount, currentView, title,
     } = this.state;
     const lastCard = vocabularies.length - 1;
+    const allCards = vocabularies.length;
 
     return (
       <>
         <header>
-          <Link to="/">Home</Link>
-          <p>{title}</p>
-          <ArrowRepeat onClick={this.shuffleData} />
+          <Link to="/"><ChevronLeft /></Link>
+          <Title>{title}</Title>
+          <button type="button" onClick={this.shuffleData}>
+            <ArrowRepeat />
+          </button>
         </header>
-
-        <p>
-          {cardCount + 1}
-          <span> / </span>
-          {vocabularies.length}
-          <span> words</span>
-        </p>
 
         <Main>
           {vocabularies.map((item, index) => (
@@ -110,6 +113,7 @@ class Deck extends Component {
               index={index}
               currentView={currentView}
               lastCard={lastCard}
+              allCards={allCards}
               onSwitchWord={this.switchWord}
               onSwitchDefinition={this.switchDefinition}
               onSwitchExample={this.switchExample}
@@ -122,5 +126,13 @@ class Deck extends Component {
     );
   }
 }
+
+Deck.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      deckId: PropTypes.string,
+    }),
+  }).isRequired,
+};
 
 export default Deck;

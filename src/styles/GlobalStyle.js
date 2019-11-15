@@ -45,11 +45,30 @@ const GlobalStyle = createGlobalStyle`
     justify-content:space-between;
     grid-row: 1;
     align-items:center;
-    padding:0 1rem;
-    svg{
-      width:1.75rem;
-      height:1.75rem;
-      cursor: pointer;
+    /* padding:0 1rem; */
+    h1{
+      font-size:1rem;
+      line-height:1.25;
+    }
+    a,
+    button{
+      width: 2.5rem;
+      height: 2.5rem;
+      /* border: solid 1px red; */
+      margin: 0.25rem;
+      border-radius: 50%;
+      padding: 0.25rem;
+      /* line-height:1; */
+      svg{
+        width:1.75rem;
+        height:1.75rem;
+        fill: ${theme.colors.white};
+      }
+      &:active,
+      &:hover,
+      &:focus{
+        background:rgba(255,255,255,0.2);
+      }
     }
   }
 `;
