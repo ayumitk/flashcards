@@ -14,7 +14,14 @@ const Title = styled.h1`
 
 const Main = styled.main`
   grid-row: 2;
-  /* height:100%; */
+  @media (min-width: 660px) {
+    max-width:640px;
+    margin:10px auto;
+    width:100%;
+  }
+  @media (max-width: 659.98px) {
+    margin:10px;
+  }
 `;
 
 class Deck extends Component {

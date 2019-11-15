@@ -11,7 +11,14 @@ const Title = styled.h1`
 const List = styled.ul`
   list-style:none;
   padding:0;
-  margin:0.5rem;
+  @media (min-width: 660px) {
+    max-width:640px;
+    margin:10px auto;
+    width:100%;
+  }
+  @media (max-width: 659.98px) {
+    margin:10px;
+  }
   li{
     a{
       background:${props => props.theme.colors.white};

@@ -12,8 +12,6 @@ const Container = styled.div`
   height:${props => props.height};
   display: grid;
   grid-template-rows: 3rem 1fr;
-  max-width: 640px;
-  margin: auto;
 `;
 
 

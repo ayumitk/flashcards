@@ -7,7 +7,7 @@ import Word from './Word';
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 2rem 1fr 4rem;
+  grid-template-rows: 1.5rem 1fr 3rem;
   height: 100%;
 `;
 
@@ -39,7 +39,7 @@ const ButtonGroup = styled.div`
 const CardContainer = styled.div`
   border: solid 1px ${props => props.theme.colors.grey.ultraLight};
   background: ${props => props.theme.colors.white};
-  margin:1rem;
+  margin:10px 0;
   border-radius: 0.25rem;
   display: grid;
   grid-template-rows: 1fr 4rem;
@@ -48,7 +48,6 @@ const CardContainer = styled.div`
 const PrevNext = styled.div`
   display:flex;
   justify-content:space-between;
-  padding:0 1rem 1rem 1rem;
   button{
     background: ${props => props.theme.colors.grey.dark};
     color: ${props => props.theme.colors.white};
@@ -111,7 +110,7 @@ class Card extends Component {
 
     return (
       <Container>
-        <p style={{ fontSize: '0.812rem', textAlign: 'center', paddingTop: '1rem' }}>
+        <p style={{ fontSize: '0.812rem', textAlign: 'center', margin: 'auto' }}>
           {cardCount + 1}
           <span> / </span>
           {allCards}
