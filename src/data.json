@@ -1,104 +1,100 @@
-[
-  {
-    "deckID":1,
+[{
+    "deckId": 1,
     "deckTitle": "How to Howl at the Moon",
-    "vocabulary":[
-      {
-        "id": 1,
+    "vocabularies": [{
+        "id": 101,
         "word": "stirring",
         "definition": "〔感情などが〕湧き起こること、動揺",
         "example": "Add in jeans, a jean jacket, and T-shirt, all of which had seen better decades, and Lance felt a touch of unease stirring in his belly."
       },
       {
-        "id": 2,
+        "id": 102,
         "word": "in retrospect",
         "definition": "思い返してみると",
         "example": "She’d understand if she’d seen the guy. Suspicious, yes, but in retrospect also weirdly cute. Probably way cuter than baby Samantha."
       },
       {
-        "id": 3,
+        "id": 103,
         "word": "whimper",
         "definition": "〔かすかな〕うめき声",
         "example": "Right there. That little… Ah. Lance gave a whimper as Tim’s lovely scrubbing fingers moved over an itchy place."
       },
       {
-        "id":4,
-        "word":"distinctly",
-        "definition":"はっきりと、際だって",
-        "example":"God, you could see the man’s distinctly sculpted quad muscles as he walked, not to mention a considerable package. That ought to be illegal. Seriously."
+        "id": 104,
+        "word": "distinctly",
+        "definition": "はっきりと、際だって",
+        "example": "God, you could see the man’s distinctly sculpted quad muscles as he walked, not to mention a considerable package. That ought to be illegal. Seriously."
       },
       {
-        "id":5,
-        "word":"quad",
-        "definition":"《quads》〈話〉大腿四頭筋",
-        "example":"God, you could see the man’s distinctly sculpted quad muscles as he walked, not to mention a considerable package. That ought to be illegal. Seriously."
+        "id": 105,
+        "word": "quad",
+        "definition": "《quads》〈話〉大腿四頭筋",
+        "example": "God, you could see the man’s distinctly sculpted quad muscles as he walked, not to mention a considerable package. That ought to be illegal. Seriously."
       },
       {
-        "id":6,
-        "word":"indecent",
-        "definition":"みだらな",
-        "example":"Excuse me, officer. I want to make a citizen’s arrest for indecent exposure and inciting a riot."
+        "id": 106,
+        "word": "indecent",
+        "definition": "みだらな",
+        "example": "Excuse me, officer. I want to make a citizen’s arrest for indecent exposure and inciting a riot."
       },
       {
-        "id":7,
-        "word":"incite",
-        "definition":"〔人や感情を〕あおり立てる",
-        "example":"Excuse me, officer. I want to make a citizen’s arrest for indecent exposure and inciting a riot."
+        "id": 107,
+        "word": "incite",
+        "definition": "〔人や感情を〕あおり立てる",
+        "example": "Excuse me, officer. I want to make a citizen’s arrest for indecent exposure and inciting a riot."
       },
       {
-        "id":8,
-        "word":"rendition",
-        "definition":"演奏、公演",
-        "example":"The song Tim chose for his moonlight run was We Will Rock You. Lance decided to jog along so he could hear the full rendition clearly."
+        "id": 108,
+        "word": "rendition",
+        "definition": "演奏、公演",
+        "example": "The song Tim chose for his moonlight run was We Will Rock You. Lance decided to jog along so he could hear the full rendition clearly."
       },
       {
-        "id":9,
-        "word":"on speed",
-        "definition":"《be ～》〈俗〉アンフェタミンを使用中である",
-        "example":"Lance dashed back and forth around Tim like he was on speed. It was his dog’s way of laughing."
+        "id": 109,
+        "word": "on speed",
+        "definition": "《be ～》〈俗〉アンフェタミンを使用中である",
+        "example": "Lance dashed back and forth around Tim like he was on speed. It was his dog’s way of laughing."
       },
       {
-        "id":10,
-        "word":"tatter",
-        "definition":"ぼろ切れ",
-        "example":"The kiss stripped away the remaining tatters of his doubts and defenses, and Lance knew with certainly, by the swelling of his heart, that he had bonded with Tim completely."
+        "id": 110,
+        "word": "tatter",
+        "definition": "ぼろ切れ",
+        "example": "The kiss stripped away the remaining tatters of his doubts and defenses, and Lance knew with certainly, by the swelling of his heart, that he had bonded with Tim completely."
       },
       {
-        "id":11,
-        "word":"wary",
-        "definition":"〔人が〕用心深い、慎重な",
-        "example":"I know we just talked about me being, well, wary of violence? But I want you to know there’s another part of me that really wants you to push me up against a wall someday, Officer."
+        "id": 111,
+        "word": "wary",
+        "definition": "〔人が〕用心深い、慎重な",
+        "example": "I know we just talked about me being, well, wary of violence? But I want you to know there’s another part of me that really wants you to push me up against a wall someday, Officer."
       },
       {
-        "id":12,
-        "word":"prowl",
-        "definition":"徘徊する",
-        "example":"Out there in the night, naked on a mountain top, with Lance’s beautiful and very male human form, but the beast still prowling just below the skin."
+        "id": 112,
+        "word": "prowl",
+        "definition": "徘徊する",
+        "example": "Out there in the night, naked on a mountain top, with Lance’s beautiful and very male human form, but the beast still prowling just below the skin."
       },
       {
-        "id":13,
-        "word":"primal",
-        "definition":"野生の",
-        "example":"There was something dangerous and primal about the animal nature -- completely unself-conscious, focused, unashamed, and lost in its mate, driven by pure instinct."
+        "id": 113,
+        "word": "primal",
+        "definition": "野生の",
+        "example": "There was something dangerous and primal about the animal nature -- completely unself-conscious, focused, unashamed, and lost in its mate, driven by pure instinct."
       },
       {
-        "id":14,
-        "word":"lost in",
-        "definition":"《be ～》没頭している",
-        "example":"There was something dangerous and primal about the animal nature -- completely unself-conscious, focused, unashamed, and lost in its mate, driven by pure instinct."
+        "id": 114,
+        "word": "lost in",
+        "definition": "《be ～》没頭している",
+        "example": "There was something dangerous and primal about the animal nature -- completely unself-conscious, focused, unashamed, and lost in its mate, driven by pure instinct."
       }
     ]
   },
   {
-    "deckID":2,
+    "deckId": 2,
     "deckTitle": "Fair Play",
-    "vocabulary":[
-      {
-        "id":1,
-        "word":"stutter",
-        "definition":"言葉に詰まりながら言う",
-        "example":"“Die by the s-s-sword?” Elliot was stuttering in his rage. “Are you fucking kidding me?” “Not literally, obviously! I just mean—”"
-      }
-    ]
+    "vocabularies": [{
+      "id": 201,
+      "word": "stutter",
+      "definition": "言葉に詰まりながら言う",
+      "example": "“Die by the s-s-sword?” Elliot was stuttering in his rage. “Are you fucking kidding me?” “Not literally, obviously! I just mean—”"
+    }]
   }
 ]
