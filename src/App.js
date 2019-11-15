@@ -1,38 +1,64 @@
+/* eslint-disable no-param-reassign */
 import React, { Component } from 'react';
+import styled, { ThemeProvider } from 'styled-components';
+import { ArrowRepeat } from 'styled-icons/typicons/ArrowRepeat';
+import GlobalStyle from './styles/GlobalStyle';
+import theme from './styles/theme';
 import Card from './components/Card';
-import 'bootstrap/dist/css/bootstrap.css';
-import './App.scss';
+import data from './data.json';
+
+const Container = styled.div`
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  max-width: 640px;
+  margin: auto;
+`;
+
+const Header = styled.header`
+  background: ${props => props.theme.colors.grey.dark};
+  color:${props => props.theme.colors.white};
+  display:flex;
+  justify-content:space-between;
+  grid-row: 1;
+  align-items:center;
+  padding:0 1rem;
+  p{
+    font-size:0.875rem;
+  }
+  svg{
+    width:1.75rem;
+    height:1.75rem;
+    cursor: pointer;
+  }
+`;
+
+const Main = styled.main`
+  grid-row: 2;
+`;
+
 
 class App extends Component {
   state = {
-    vocabularies: [
-      {
-        id: 1,
-        word: 'reputation',
-        definition: '評判,世評',
-        example: 'Maybe it was supposed to be a smile. Probably not, given Kennedy\'s reputaton.',
-        ok: 0,
-        ng: 0,
-      },
-      {
-        id: 2,
-        word: 'obnoxious',
-        definition: '気に障る,不快な',
-        example: 'Top note sandalwood, bottom note obnoxious.',
-        ok: 0,
-        ng: 0,
-      },
-      {
-        id: 3,
-        word: 'steeple',
-        definition: '(教会などの)尖塔(せんとう)',
-        example: 'White churches with tall steeples',
-        ok: 0,
-        ng: 0,
-      },
-    ],
+    vocabularies: [],
     cardCount: 0,
     currentView: 'word',
+  }
+
+  componentDidMount() {
+    // shuffle data array
+    const shuffle = ([...arr]) => {
+      let m = arr.length;
+      while (m) {
+        const i = Math.floor(Math.random() * (m -= 1));
+        [arr[m], arr[i]] = [arr[i], arr[m]];
+      }
+      return arr;
+    };
+
+    this.setState({
+      vocabularies: shuffle(data),
+    });
   }
 
   switchWord = (view) => {
@@ -53,15 +79,36 @@ class App extends Component {
     });
   }
 
-  gotIt = (index) => {
+  goPrev = (index) => {
     this.setState({
-      cardCount: index + 1,
+      cardCount: index - 1,
+      currentView: 'word',
     });
   }
 
-  studyAgain = (index) => {
+  goNext = (index) => {
     this.setState({
       cardCount: index + 1,
+      currentView: 'word',
+    });
+  }
+
+  shuffleData = () => {
+    const { vocabularies } = this.state;
+
+    const shuffle = ([...arr]) => {
+      let m = arr.length;
+      while (m) {
+        const i = Math.floor(Math.random() * (m -= 1));
+        [arr[m], arr[i]] = [arr[i], arr[m]];
+      }
+      return arr;
+    };
+
+    this.setState({
+      vocabularies: shuffle(vocabularies),
+      cardCount: 0,
+      currentView: 'word',
     });
   }
 
@@ -69,29 +116,39 @@ class App extends Component {
     const { vocabularies, cardCount, currentView } = this.state;
     const lastCard = vocabularies.length - 1;
     return (
-      <div className="container">
-        <p>
-          {cardCount + 1}
-          <span> / </span>
-          {vocabularies.length}
-          <span> words</span>
-        </p>
-        {vocabularies.map((item, index) => (
-          <Card
-            key={item.id}
-            vocabulary={item}
-            cardCount={cardCount}
-            index={index}
-            currentView={currentView}
-            lastCard={lastCard}
-            onSwitchWord={this.switchWord}
-            onSwitchDefinition={this.switchDefinition}
-            onSwitchExample={this.switchExample}
-            onGotIt={this.gotIt}
-            onStudyAgain={this.studyAgain}
-          />
-        ))}
-      </div>
+      <>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <Container>
+            <Header>
+              <p>
+                {cardCount + 1}
+                <span> / </span>
+                {vocabularies.length}
+                <span> words</span>
+              </p>
+              <ArrowRepeat onClick={this.shuffleData} />
+            </Header>
+            <Main>
+              {vocabularies.map((item, index) => (
+                <Card
+                  key={item.id}
+                  vocabulary={item}
+                  cardCount={cardCount}
+                  index={index}
+                  currentView={currentView}
+                  lastCard={lastCard}
+                  onSwitchWord={this.switchWord}
+                  onSwitchDefinition={this.switchDefinition}
+                  onSwitchExample={this.switchExample}
+                  onGoPrev={this.goPrev}
+                  onGoNext={this.goNext}
+                />
+              ))}
+            </Main>
+          </Container>
+        </ThemeProvider>
+      </>
     );
   }
 }
