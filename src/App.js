@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Helmet, Parent, Child } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
 
