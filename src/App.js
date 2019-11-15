@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Helmet, Parent, Child } from 'react-helmet';
 import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
 
@@ -33,6 +34,12 @@ class App extends Component {
 
     return (
       <>
+        <Helmet titleTemplate="%s - M/M Romance Book Flashcards" defaultTitle="M/M Romance Book Flashcards">
+          <meta charSet="utf-8" />
+          <meta name="description" content="Let's learn vocabularies from M/M Romance Book!" />
+          <link rel="canonical" href="https://flashcards.muchimemo.com/" />
+        </Helmet>
+
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <Container height={height} ontouchstart="">

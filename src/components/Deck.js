@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ArrowRepeat } from 'styled-icons/typicons/ArrowRepeat';
 import { ChevronLeft } from 'styled-icons/boxicons-regular/ChevronLeft';
+import { Helmet } from 'react-helmet';
 import data from '../data.json';
 import Card from './Card';
 
@@ -102,6 +103,10 @@ class Deck extends Component {
 
     return (
       <>
+        <Helmet>
+          <title>{title}</title>
+        </Helmet>
+
         <header>
           <Link to="/"><ChevronLeft /></Link>
           <Title>{title}</Title>
