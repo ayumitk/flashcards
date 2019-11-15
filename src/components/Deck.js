@@ -7,24 +7,6 @@ import { ArrowRepeat } from 'styled-icons/typicons/ArrowRepeat';
 import data from '../data.json';
 import Card from './Card';
 
-const Header = styled.header`
-  background: ${props => props.theme.colors.grey.dark};
-  color:${props => props.theme.colors.white};
-  display:flex;
-  justify-content:space-between;
-  grid-row: 1;
-  align-items:center;
-  padding:0 1rem;
-  p{
-    font-size:0.875rem;
-  }
-  svg{
-    width:1.75rem;
-    height:1.75rem;
-    cursor: pointer;
-  }
-`;
-
 const Main = styled.main`
   grid-row: 2;
 `;
@@ -105,12 +87,12 @@ class Deck extends Component {
     const lastCard = vocabularies.length - 1;
 
     return (
-      <div>
-        <Header>
+      <>
+        <header>
           <Link to="/">Home</Link>
           <p>{title}</p>
           <ArrowRepeat onClick={this.shuffleData} />
-        </Header>
+        </header>
 
         <p>
           {cardCount + 1}
@@ -136,11 +118,7 @@ class Deck extends Component {
             />
           ))}
         </Main>
-
-        {/* {vocabularies.map(item => (
-          <div key={item.id}>{item.word}</div>
-        ))} */}
-      </div>
+      </>
     );
   }
 }

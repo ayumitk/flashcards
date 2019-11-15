@@ -38,6 +38,20 @@ const GlobalStyle = createGlobalStyle`
       color:${theme.colors.white};
     }
   }
+  header{
+    background: ${theme.colors.grey.dark};
+    color:${theme.colors.white};
+    display:flex;
+    justify-content:space-between;
+    grid-row: 1;
+    align-items:center;
+    padding:0 1rem;
+    svg{
+      width:1.75rem;
+      height:1.75rem;
+      cursor: pointer;
+    }
+  }
 `;
 
 export default GlobalStyle;
