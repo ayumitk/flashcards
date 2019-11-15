@@ -8,7 +8,7 @@ import Card from './components/Card';
 import data from './data.json';
 
 const Container = styled.div`
-  height: 100vh;
+  height:${props => props.height};
   display: grid;
   grid-template-rows: 3rem 1fr;
   max-width: 640px;
@@ -43,6 +43,7 @@ class App extends Component {
     vocabularies: [],
     cardCount: 0,
     currentView: 'word',
+    height: '640px',
   }
 
   componentDidMount() {
@@ -56,8 +57,11 @@ class App extends Component {
       return arr;
     };
 
+    const vh = `${window.innerHeight}px`;
+
     this.setState({
       vocabularies: shuffle(data),
+      height: vh,
     });
   }
 
@@ -113,13 +117,16 @@ class App extends Component {
   }
 
   render() {
-    const { vocabularies, cardCount, currentView } = this.state;
+    const {
+      vocabularies, cardCount, currentView, height,
+    } = this.state;
     const lastCard = vocabularies.length - 1;
+
     return (
       <>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
-          <Container>
+          <Container height={height}>
             <Header>
               <p>
                 {cardCount + 1}
