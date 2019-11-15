@@ -2,10 +2,14 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { ArrowRepeat } from 'styled-icons/typicons/ArrowRepeat';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
 import Card from './components/Card';
 import data from './data.json';
+
+import Home from './components/Home';
+import Deck from './components/Deck';
 
 const Container = styled.div`
   height:${props => props.height};
@@ -40,6 +44,7 @@ const Main = styled.main`
 
 class App extends Component {
   state = {
+    deckID: 1,
     vocabularies: [],
     cardCount: 0,
     currentView: 'word',
@@ -118,7 +123,7 @@ class App extends Component {
 
   render() {
     const {
-      vocabularies, cardCount, currentView, height,
+      deckID, vocabularies, cardCount, currentView, height,
     } = this.state;
     const lastCard = vocabularies.length - 1;
 
@@ -127,32 +132,42 @@ class App extends Component {
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <Container height={height}>
-            <Header>
-              <p>
-                {cardCount + 1}
-                <span> / </span>
-                {vocabularies.length}
-                <span> words</span>
-              </p>
-              <ArrowRepeat onClick={this.shuffleData} />
-            </Header>
-            <Main>
-              {vocabularies.map((item, index) => (
-                <Card
-                  key={item.id}
-                  vocabulary={item}
-                  cardCount={cardCount}
-                  index={index}
-                  currentView={currentView}
-                  lastCard={lastCard}
-                  onSwitchWord={this.switchWord}
-                  onSwitchDefinition={this.switchDefinition}
-                  onSwitchExample={this.switchExample}
-                  onGoPrev={this.goPrev}
-                  onGoNext={this.goNext}
-                />
-              ))}
-            </Main>
+            <Router>
+              <Header>
+                <Link to="/">Home</Link>
+                <Link to="/Deck">Deck</Link>
+                <p>
+                  {cardCount + 1}
+                  <span> / </span>
+                  {vocabularies.length}
+                  <span> words</span>
+                </p>
+                <ArrowRepeat onClick={this.shuffleData} />
+              </Header>
+
+
+              <Route exact path="/" component={Home} />
+              <Route path="/Deck" render={props => <Deck deckID={deckID} {...props} />} />
+
+
+              <Main>
+                {vocabularies.map((item, index) => (
+                  <Card
+                    key={item.id}
+                    vocabulary={item}
+                    cardCount={cardCount}
+                    index={index}
+                    currentView={currentView}
+                    lastCard={lastCard}
+                    onSwitchWord={this.switchWord}
+                    onSwitchDefinition={this.switchDefinition}
+                    onSwitchExample={this.switchExample}
+                    onGoPrev={this.goPrev}
+                    onGoNext={this.goNext}
+                  />
+                ))}
+              </Main>
+            </Router>
           </Container>
         </ThemeProvider>
       </>
