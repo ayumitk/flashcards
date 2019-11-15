@@ -1,6 +1,7 @@
 [{
-    "deckId": 1,
+    "id": 1,
     "title": "How to Howl at the Moon",
+    "series":"Howl at the Moon #1",
     "author":"Eli Easton",
     "vocabularies": [{
         "id": 1,
@@ -89,14 +90,277 @@
     ]
   },
   {
-    "deckId": 2,
+    "id": 2,
     "title": "Fair Play",
+    "series":"All's Fair #2",
     "author":"Josh Lanyon",
-    "vocabularies": [{
-      "id": 1,
-      "word": "stutter",
-      "definition": "言葉に詰まりながら言う",
-      "example": "“Die by the s-s-sword?” Elliot was stuttering in his rage. “Are you fucking kidding me?” “Not literally, obviously! I just mean—”"
-    }]
+    "vocabularies": [
+      {
+        "id": 1,
+        "word": "stutter",
+        "definition": "言葉に詰まりながら言う",
+        "example": "“Die by the s-s-sword?” Elliot was stuttering in his rage. “Are you fucking kidding me?” “Not literally, obviously! I just mean—”"
+      },
+      {
+        "id": 2,
+        "word": "overwhelming",
+        "definition": "圧倒的な",
+        "example": "Elliot had an overwhelming desire—need—to be overpowered in bed. He liked to be fucked—quite literally—into submission."
+      },
+      {
+        "id": 3,
+        "word": "overpower",
+        "definition": "征服する",
+        "example": "Elliot had an overwhelming desire—need—to be overpowered in bed. He liked to be fucked—quite literally—into submission."
+      },
+      {
+        "id": 4,
+        "word": "competent",
+        "definition": "〔人が仕事などにおいて〕有能な、能力がある",
+        "example": "In his youth he had struggled with this self-knowledge, resisted it, but as he’d grown up and gained experience he’d eventually accepted the truth that, as important as it was to him to be confident, competent and in control of all other aspects of his life, in bed he was a complete and abject bottom."
+      },
+      {
+        "id": 5,
+        "word": "abject",
+        "definition": "絶望的な、悲惨な、惨めな",
+        "example": "In his youth he had struggled with this self-knowledge, resisted it, but as he’d grown up and gained experience he’d eventually accepted the truth that, as important as it was to him to be confident, competent and in control of all other aspects of his life, in bed he was a complete and abject bottom."
+      },
+      {
+        "id": 6,
+        "word": "stern",
+        "definition": "厳しい、容赦のない",
+        "example": "“Say it,” Tucker ordered softly. Soft but stern. And that made it easy because Tucker was in charge here."
+      },
+      {
+        "id": 7,
+        "word": "stern",
+        "definition": "厳しい、容赦のない",
+        "example": "“Say it,” Tucker ordered softly. Soft but stern. And that made it easy because Tucker was in charge here."
+      },
+      {
+        "id": 8,
+        "word": "castrate",
+        "definition": "去勢する",
+        "example": "Hell, he was less than an inch away from castrating him. Elliot had to obey."
+      },
+      {
+        "id": 9,
+        "word": "clamp",
+        "definition": "〔物をしっかりと〕持つ",
+        "example": "Tucker’s arms clamped so tight, Elliot wondered if his ribs would crack."
+      },
+      {
+        "id": 10,
+        "word": "content",
+        "definition": "《be ～》満足している、甘んじる",
+        "example": "They had their battles, but he couldn’t remember ever feeling more comfortable or content in his adult life than he had these past months with Tucker."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "A Dangerous Thing",
+    "series":"The Adrien English Mysteries #2",
+    "author":"Josh Lanyon",
+    "vocabularies": [
+      {
+        "id": 1,
+        "word": "kindling",
+        "definition": "〔火をおこすための〕たき付け",
+        "example": "When I woke several hours later, Jake was outside reducing the timberline to a pile of kindling."
+      },
+      {
+        "id": 2,
+        "word": "musculature",
+        "definition": "《医》筋肉組織",
+        "example": "For a time I stood at the window admiring the bronzed musculature of his bare chest as he sweated and chopped wood with manly ferocity."
+      },
+      {
+        "id": 3,
+        "word": "ferocity",
+        "definition": "凶暴性、残忍な行為、どう猛性",
+        "example": "For a time I stood at the window admiring the bronzed musculature of his bare chest as he sweated and chopped wood with manly ferocity."
+      },
+      {
+        "id": 4,
+        "word": "chime in",
+        "definition": "相づちを打つ、同意する",
+        "example": "“Kevin was just leaving,” I said, managing to detach myself from Kevin. “Did he mistake you for the door?” “It’s not what you think,” Kevin chimed in. Not really a helpful remark."
+      },
+      {
+        "id": 5,
+        "word": "unerringly",
+        "definition": "寸分の違いもなく、的確に",
+        "example": "I caught my breath as his finger moved knowledgeably, unerringly. “There’s the off button,” he murmured."
+      },
+      {
+        "id": 6,
+        "word": "unerringly",
+        "definition": "寸分の違いもなく、的確に",
+        "example": "I caught my breath as his finger moved knowledgeably, unerringly. “There’s the off button,” he murmured."
+      },
+      {
+        "id": 7,
+        "word": "exertion",
+        "definition": "〔肉体的な〕骨折り、奮闘、大変な努力",
+        "example": "“I owe you one, baby,” he muttered against my ear. I could feel his heart banging away with exertion and excitement against my own. It was the most beautiful sound in the world, and I closed my eyes as I listened and thought, I love you."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Fatal Shadows",
+    "series":"The Adrien English Mysteries #1",
+    "author":"Josh Lanyon",
+    "vocabularies": [
+      {
+        "id": 1,
+        "word": "prowler",
+        "definition": "こそ泥、（挙動）不審者",
+        "example": "“Yeah. Monday when you pretended to be looking for prowlers in my closet.” He laughed. “Hey, it’s not much of a closet is it?” “No. It’s not. I don’t like closets. Life’s too short to spend hiding in the dark.”"
+      },
+      {
+        "id": 2,
+        "word": "pelt",
+        "definition": "〔動物からはいだ毛の付いた〕生皮",
+        "example": "Then I got another mental image of him, broad chest covered in blond pelt, muscular forearms, big smooth cock jutting out of a silky nest."
+      },
+      {
+        "id": 3,
+        "word": "pinprick",
+        "definition": "ピン［針］で刺す",
+        "example": "Listened to pinpricks of rain against the windows. The wettest winter since El Niño, everyone kept saying."
+      },
+      {
+        "id": 4,
+        "word": "cane",
+        "definition": "むち",
+        "example": "Riordan was not remotely my type. Even without the whips and canes and butt plugs."
+      },
+      {
+        "id": 5,
+        "word": "And yet",
+        "definition": "それなのに、それにもかかわらず",
+        "example": "And yet. And yet there was something about his strength, his arrogance, his sheer size that got under my skin."
+      },
+      {
+        "id": 6,
+        "word": "sheer",
+        "definition": "純粋な、単なる",
+        "example": "And yet. And yet there was something about his strength, his arrogance, his sheer size that got under my skin."
+      },
+      {
+        "id": 7,
+        "word": "sack",
+        "definition": "〈米話〉ベッド、寝床",
+        "example": "He probably couldn’t even spell vanilla. He was probably selfish in the sack. Probably selfish and greedy and … unsophisticated."
+      },
+      {
+        "id": 8,
+        "word": "unsophisticated",
+        "definition": "〔人などが〕素朴な、世慣れていない",
+        "example": "He probably couldn’t even spell vanilla. He was probably selfish in the sack. Probably selfish and greedy and … unsophisticated."
+      },
+      {
+        "id": 9,
+        "word": "fumble",
+        "definition": "不器用に扱う、下手にいじり回す",
+        "example": "He shrugged out of his suede jacket, tossed it to me. It felt like something newly dead hanging there in my hands. After a moment I fumbled my way into it. It was warm from his body and carried the scent of his soap."
+      },
+      {
+        "id": 10,
+        "word": "pearly",
+        "definition": "真珠のような",
+        "example": "There was silence. I listened. He didn’t say anything. “Are we communicating through the Psychic Hotline or what?” “Shut up a sec,” he said from between his pearly whites."
+      },
+      {
+        "id": 11,
+        "word": "righteous",
+        "definition": "〔行為などが〕正義の、公正な",
+        "example": "His glance slid my way. “You know, this won’t be an easy thing, Adrien.” An officer-involved shooting was not going to be fun, righteous or not. “The investigation you mean?” “No.” He gave me that crooked smile. “No, I don’t mean that.” I stared out at the first blush of sunrise lighting the surrounding Chatsworth hills. Despite myself, I started to smile."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Fair Game",
+    "series":"All's Fair #1",
+    "author":"Josh Lanyon",
+    "vocabularies": [
+      {
+        "id": 1,
+        "word": "exaggeration",
+        "definition": "誇張表現",
+        "example": "An awful lot of memories for a relationship that hadn’t lasted a year. Hadn’t lasted three months, to be accurate. In fact, calling it a “relationship” was kind of an exaggeration."
+      },
+      {
+        "id": 2,
+        "word": "mutually",
+        "definition": "互いに、共通に",
+        "example": "The only thing they ever had in common was the job. And a mutually weird sense of humor. And a love of Nissan cars and pizza. And the sex."
+      },
+      {
+        "id": 3,
+        "word": "mutually",
+        "definition": "互いに、共通に",
+        "example": "The only thing they ever had in common was the job. And a mutually weird sense of humor. And a love of Nissan cars and pizza. And the sex."
+      },
+      {
+        "id": 4,
+        "word": "purr",
+        "definition": "〔車が〕エンジンの音を立てる",
+        "example": "“Okay. Thanks for staying on the line. You’ll be pleased to know I feel like an idiot.” “Try the engine.” “Now you’re just making fun of me.” “Well yeah, but try the engine anyway.” The engine purred into smooth life. “All systems go.” “Roger, Houston. Have a nice flight."
+      },
+      {
+        "id": 5,
+        "word": "glistening",
+        "definition": "〔雨にぬれた路面などが〕ギラギラ光る",
+        "example": "Surrounded by glistening pine trees, enveloped by rain and fog, for the first time it occurred to Elliot that his extended period of solitude just might be turning into loneliness."
+      },
+      {
+        "id": 6,
+        "word": "insistent",
+        "definition": "執拗な",
+        "example": "He turned his head and Tucker’s big hand landed ungracefully on his shoulder, drawing him back as his warm mouth landed on Elliot’s. For an astonished moment Elliot was aware of nothing but the feel of Tucker’s hard, insistent lips on his, the almost desperate pressure, the taste, the scent, the disturbing reality of Tucker’s desire."
+      },
+      {
+        "id": 7,
+        "word": "thrust",
+        "definition": "強く押す、突き刺すこと",
+        "example": "“Tucker…” Tucker’s thrusts punctuated his words. “I missed you so…fucking…much…”"
+      },
+      {
+        "id": 8,
+        "word": "punctuate",
+        "definition": "中断させる",
+        "example": "“Tucker…” Tucker’s thrusts punctuated his words. “I missed you so…fucking…much…”"
+      },
+      {
+        "id": 9,
+        "word": "sanity",
+        "definition": "健全さ",
+        "example": "“You’re crazy about me, Elliot. Why not admit it?” Elliot shook his head. “You’re nuts.” “Nah. You can’t kid a kidder.” He wrapped a muscular arm around Elliot and tugged him over. Elliot went with it, but he was still shaking his head over the sad state of Tucker’s sanity."
+      },
+      {
+        "id": 10,
+        "word": "ferocious",
+        "definition": "残忍な、どう猛な",
+        "example": "...his face bone white beneath the freckles and blue eyes wet and glittering with ferocious emotion. “If you even try to die, I’ll kill you myself,” Tucker had said in a choky voice."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "The Mermaid Murders",
+    "series":"The Art of Murder #1",
+    "author":"Josh Lanyon",
+    "vocabularies": [
+      {
+        "id": 1,
+        "word": "tranquil",
+        "definition": "穏やかな",
+        "example": "It was a beautiful summer day. Not a cloud in the sky. And if the air had not been crackling with voices and radios and assorted engines, it would probably have felt tranquil, peaceful."
+      }
+    ]
   }
 ]

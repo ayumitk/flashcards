@@ -33,9 +33,8 @@ class Deck extends Component {
   }
 
   componentDidMount() {
-    // const { deckId } = this.props.match.params;
     const { match: { params } } = this.props;
-    const deck = data.find(v => v.deckId === parseInt(params.deckId, 10));
+    const deck = data.find(v => v.id === parseInt(params.id, 10));
 
     this.setState({
       vocabularies: deck.vocabularies,
@@ -137,7 +136,7 @@ class Deck extends Component {
 Deck.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      deckId: PropTypes.string,
+      id: PropTypes.string,
     }),
   }).isRequired,
 };

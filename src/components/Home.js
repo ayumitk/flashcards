@@ -43,17 +43,18 @@ class Home extends Component {
         </header>
         <List>
           {data.map(item => (
-            <li key={item.deckId}>
-              <Link to={`/deck/${item.deckId}`}>
-                <div>
+            <li key={item.id}>
+              <Link to={`/deck/${item.id}`}>
+                <h2 style={{ fontSize: '1.25rem', marginBottom: '0.25rem' }}>
                   {item.title}
-                  <span style={{ fontSize: '0.812rem', paddingLeft: '0.5rem' }}>
+                  <span style={{ fontSize: '0.812rem', paddingLeft: '0.5rem', fontWeight: 'normal' }}>
                     (
                     {item.vocabularies.length}
                     )
                   </span>
-                </div>
-                <span style={{ fontSize: '0.812rem' }}>{item.author}</span>
+                </h2>
+                <p style={{ fontSize: '0.812rem' }}>{item.series}</p>
+                <p style={{ fontSize: '0.812rem' }}>{item.author}</p>
               </Link>
             </li>
           ))}

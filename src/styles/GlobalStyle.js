@@ -19,6 +19,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${theme.baseFontSize};
     line-height: 1.6;
   }
+  h1,h2{
+    line-height:1.25;
+    margin:0;
+  }
   svg{
     width:1rem;
     height:1rem;
@@ -48,7 +52,6 @@ const GlobalStyle = createGlobalStyle`
     /* padding:0 1rem; */
     h1{
       font-size:1rem;
-      line-height:1.25;
     }
     a,
     button{
