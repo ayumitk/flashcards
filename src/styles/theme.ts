@@ -1,3 +1,5 @@
+import { DefaultTheme } from 'styled-components';
+
 const colors = {
   primary: '#47a89c', // Color for buttons or links
   bg: '#f5f5f5', // Background color
@@ -29,14 +31,15 @@ const breakpoints = {
   phone: '600px',
 };
 
-const theme = {
+
+const theme: DefaultTheme = {
   colors,
   transitions,
   fontSize,
   breakpoints,
   fontFamily,
-  maxWidth: '1000px',
+  maxWidth: '640px',
   baseFontSize: '18px',
-};
+}
 
-export default theme;
+export { theme }

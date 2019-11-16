@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ArrowRepeat } from 'styled-icons/typicons/ArrowRepeat';
 import { ChevronLeft } from 'styled-icons/boxicons-regular/ChevronLeft';
@@ -25,7 +24,23 @@ const Main = styled.main`
   }
 `;
 
-class Deck extends Component {
+type DeckProps = {
+  match: {
+    params: {
+      id: string
+      deck: object
+    }
+  }
+}
+
+type DeckState = {
+  vocabularies: object;
+  cardCount: number;
+  currentView: string;
+  title: string;
+}
+
+class Deck extends Component<DeckProps, DeckState> {
   state = {
     vocabularies: [],
     cardCount: 0,
@@ -35,40 +50,40 @@ class Deck extends Component {
 
   componentDidMount() {
     const { match: { params } } = this.props;
-    const deck = data.find(v => v.id === parseInt(params.id, 10));
+    const deck: {vocabularies:object, title:string} = data.find(v => v.id === parseInt(params.id, 10));
 
     this.setState({
       vocabularies: deck.vocabularies,
       title: deck.title,
-    });
+    } as DeckState);
   }
 
-  switchWord = (view) => {
+  switchWord = (view:string) => {
     this.setState({
       currentView: view,
     });
   }
 
-  switchDefinition = (view) => {
+  switchDefinition = (view:string) => {
     this.setState({
       currentView: view,
     });
   }
 
-  switchExample = (view) => {
+  switchExample = (view:string) => {
     this.setState({
       currentView: view,
     });
   }
 
-  goPrev = (index) => {
+  goPrev = (index:number) => {
     this.setState({
       cardCount: index - 1,
       currentView: 'word',
     });
   }
 
-  goNext = (index) => {
+  goNext = (index:number) => {
     this.setState({
       cardCount: index + 1,
       currentView: 'word',
@@ -137,13 +152,5 @@ class Deck extends Component {
     );
   }
 }
-
-Deck.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.string,
-    }),
-  }).isRequired,
-};
 
 export default Deck;

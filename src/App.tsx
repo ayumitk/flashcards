@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider} from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import GlobalStyle from './styles/GlobalStyle';
-import theme from './styles/theme';
+import { theme } from './styles/theme';
 
 import Home from './components/Home';
 import Deck from './components/Deck';
 import NotFound from './components/NotFound';
 
-const Container = styled.div`
+
+interface ContainerProps {
+  readonly height: string;
+};
+
+const Container = styled.div<ContainerProps>`
   height:${props => props.height};
   display: grid;
   grid-template-rows: 3rem 1fr;
 `;
 
+type AppState = {
+  height: string;
+}
 
-class App extends Component {
+class App extends Component<AppState> {
   state = {
     height: '640px',
   }
@@ -29,7 +37,7 @@ class App extends Component {
   }
 
 
-  render() {
+  public render() {
     const { height } = this.state;
 
     return (
@@ -42,7 +50,7 @@ class App extends Component {
 
         <GlobalStyle />
         <ThemeProvider theme={theme}>
-          <Container height={height} ontouchstart="">
+          <Container height={height}>
             <BrowserRouter>
               <Switch>
                 <Route exact path="/" component={Home} />

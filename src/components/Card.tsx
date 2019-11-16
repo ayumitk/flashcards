@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { ChevronRight } from 'styled-icons/boxicons-regular/ChevronRight';
 import { ChevronLeft } from 'styled-icons/boxicons-regular/ChevronLeft';
 import styled from 'styled-components';
@@ -11,7 +10,11 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const Button = styled.button`
+interface ButtonProps {
+  active: boolean
+};
+
+const Button = styled.button<ButtonProps>`
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   opacity: ${props => (props.disabled ? '0.25' : '1')};
   background: ${props => (props.active ? props.theme.colors.grey.light : props.theme.colors.white)};
@@ -68,8 +71,21 @@ const WordContainer = styled.div`
   padding:1rem;
 `;
 
+type CardProps = {
+  onSwitchWord: any
+  onSwitchDefinition: any
+  onSwitchExample: any
+  onGoPrev: any
+  onGoNext: any
+  lastCard:number
+  vocabulary:object
+  cardCount:number
+  index: number
+  currentView: string
+  allCards: number
+};
 
-class Card extends Component {
+class Card extends Component<CardProps> {
   switchWord = () => {
     const { onSwitchWord } = this.props;
     onSwitchWord('word');
@@ -85,14 +101,14 @@ class Card extends Component {
     onSwitchExample('example');
   }
 
-  goPrev = (index) => {
+  goPrev = (index:number) => {
     const { onGoPrev } = this.props;
     if (index !== 0) {
       onGoPrev(index);
     }
   }
 
-  goNext = (index) => {
+  goNext = (index:number) => {
     const { onGoNext, lastCard } = this.props;
     if (lastCard !== index) {
       onGoNext(index);
@@ -149,19 +165,5 @@ class Card extends Component {
     );
   }
 }
-
-Card.propTypes = {
-  onSwitchWord: PropTypes.func.isRequired,
-  onSwitchDefinition: PropTypes.func.isRequired,
-  onSwitchExample: PropTypes.func.isRequired,
-  onGoPrev: PropTypes.func.isRequired,
-  onGoNext: PropTypes.func.isRequired,
-  vocabulary: PropTypes.object.isRequired,
-  cardCount: PropTypes.number.isRequired,
-  index: PropTypes.number.isRequired,
-  currentView: PropTypes.string.isRequired,
-  lastCard: PropTypes.number.isRequired,
-  allCards: PropTypes.number.isRequired,
-};
 
 export default Card;
